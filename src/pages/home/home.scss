@@ -1,3 +1,69 @@
 page-home {
+    .header::after {
+        background-image: url('');
+    }
+    ion-navbar.toolbar {
+        border-bottom: #000000 solid 2px;
+    }
+    .bar-button {
+        font-size: 30px;
+        color: #666666;
+    }
+    div.toolbar-background {
+        width: 78%;
+        background: url("../assets/imgs/logo.png");
+        border: 0 !important;
+        height: 98%;
+    }
 
+    .scroll {
+        height: 100%
+    }
+
+    #map {
+        width: 100%;
+        height: 81%;
+    }
+
+    .scroll-content {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    ion-header {
+        padding-bottom: 0 !important;
+    }
+    div.title {
+        font-size: 22px;
+        height: 9%;
+        align-items: center;
+        display: flex;
+        ion-icon {
+            display: inline-block;
+            opacity: 0.9;
+            color: #499931;
+            text-shadow: 0 0 2px rgba(75, 226, 130, 0.934);
+            font-size: 44px;
+            width: 50px;
+        }
+    }
+    div.footer {
+        height: 10%;
+        align-items: flex-end;
+        display: flex;
+        ion-icon {
+            display: inline-block;
+            opacity: 0.9;
+            color: #888888;
+            text-shadow: 0 0 2px rgba(75, 226, 130, 0.934);
+            font-size: 33px;
+            width: 35px;
+        }
+        ion-grid {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        ion-row.footer-row {
+            border-top: solid #222222 1px;
+        }
+    }
 }

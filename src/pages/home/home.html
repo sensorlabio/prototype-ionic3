@@ -1,14 +1,38 @@
-<ion-header>
+<ion-header padding>
   <ion-navbar>
+    <div class="navBar-logo">
+    </div>
     <ion-title>
-      Ionic Blank
     </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="showNearbyResto()"><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="title">
+    <ion-icon name="square"></ion-icon>
+    <span>Places</span>
+  </div>
+  <div #map id="map"></div>
+  <div class="footer">
+    <ion-grid>
+      <ion-row class="footer-row">
+        <ion-col col-8>
+          <ion-row justify-content-start>
+            <ion-icon name="square"></ion-icon>
+            <ion-icon name="square"></ion-icon>
+            <ion-icon name="square"></ion-icon>
+            <ion-icon name="square"></ion-icon>
+          </ion-row>
+        </ion-col>
+        <ion-col col-4>
+          <ion-row justify-content-end>
+            <ion-icon name="square" style="margin-right: -10px;"></ion-icon>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>
