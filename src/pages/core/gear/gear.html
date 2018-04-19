@@ -1,0 +1,25 @@
+<ion-content>
+    <div class="title">
+        <img src="./assets/imgs/gear_transparent.png" (click)="gotoPlacesPage()"/>
+        <span>Gear</span>
+    </div>
+    <div class="gear-table" *ngIf="gears.length > 0">
+        <ion-scroll scrollY="true">
+            <ion-grid>
+            <ion-row class="header">
+                <ion-col col-5>Gear</ion-col>
+                <ion-col class="text-center" col-2>Temp</ion-col>
+                <ion-col class="text-center" col-2>ACC</ion-col>
+                <ion-col class="text-center" col-3>Time</ion-col>
+            </ion-row>
+            <ion-row *ngFor="let item of gears; let i=index" [style.background-color]="i%2 == 0 ? '#cccccc' : 'white'">
+                <ion-col col-5>{{item.gear}}</ion-col>
+                <ion-col class="text-center" col-2>{{item.temp}}</ion-col>
+                <ion-col class="text-center" col-2>{{item.acc}}</ion-col>
+                <ion-col class="text-center" col-2>{{item.time}}</ion-col>
+            </ion-row>
+            </ion-grid>
+        </ion-scroll>
+    </div>
+</ion-content>
+    

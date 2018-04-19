@@ -8,33 +8,38 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Geolocation } from '@ionic-native/geolocation';
 
-import { MyApp } from './app.component';
+import { DearestgearApp } from './app.component';
+import { LoginPage } from '../pages/login/login';
 
 // Modules
-import { HomePageModule } from '../pages/home/home.module';
+import { HomePageModule } from '../pages/core/core.module';
 
 // Providers
 import { Api, SensorsService } from '../providers/providers';
+import { Values } from '../providers/values'
 
 @NgModule({
   declarations: [
-    MyApp
+    DearestgearApp,
+    LoginPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(DearestgearApp),
     HttpClientModule,
     HomePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
+    DearestgearApp,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation,
+    Values,
     Api,
     SensorsService
   ]

@@ -1,0 +1,60 @@
+<ion-header padding>
+  <ion-navbar>
+    <div class="navBar-logo">
+      <img src="assets/imgs/logo.png" (click)="gotoPage('home')"/>
+    </div>
+    <ion-title>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-menu side="right" type="overlay" [content]="coreNav">
+    <ion-header>
+        <ion-toolbar>
+        <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+        <button ion-item menuClose (click)="openPage('home')">
+            Home
+        </button>
+        <button ion-item menuClose (click)="openPage('gear')">
+            Gear
+        </button>
+        <button ion-item menuClose (click)="openPage('places')">
+            Places
+        </button>
+        <button ion-item menuClose (click)="openPage('notifications')">
+            Notifications
+        </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-content padding>
+  <div class="nav-container">
+    <ion-nav #coreNav [root]="rootPage"></ion-nav>
+  </div>
+  <div class="footer">
+    <ion-grid>
+      <ion-row class="footer-row">
+        <ion-col col-8>
+          <ion-row justify-content-start>
+            <img src="assets/imgs/home_transparent.png" (click)="openPage('home')"/>
+            <img src="assets/imgs/gear_transparent.png" (click)="openPage('gear')"/>
+            <img src="assets/imgs/location_transparent.png" (click)="openPage('places')"/>
+            <img src="assets/imgs/messages.png" (click)="openPage('notifications')"/>
+          </ion-row>
+        </ion-col>
+        <ion-col col-4>
+          <ion-row justify-content-end>
+            <ion-icon name="refresh" style="margin-right: -10px;"></ion-icon>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

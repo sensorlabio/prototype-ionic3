@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ProtytypeApp</name>
-    <description>An awesome Ionic/Cordova app.</description>
+<widget id="com.einsundnull.ecoop" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Dearestgear</name>
+    <description>mobileapp for gear user</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />
@@ -92,5 +92,5 @@
         <variable name="CFBUNDLEDEVELOPMENTREGION" value="English" />
     </plugin>
     <allow-navigation href="http://10.0.1.157:8100" />
-    <engine name="ios" spec="~4.5.4" />
+    <engine name="ios" spec="4.5.4" />
 </widget>

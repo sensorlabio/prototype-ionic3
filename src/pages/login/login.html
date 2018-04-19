@@ -1,0 +1,24 @@
+<ion-content padding>
+	<div class="centered-content-wrapper">
+		<div class="logo-wrapper">
+			<img src="assets/imgs/logo.png" />
+		</div>
+		<form #form="ngForm" class="auth-form" (ngSubmit)="doLogin(form)">
+			<div class="login-form-field">
+				<ion-list>
+					<ion-item>
+						<ion-input type="email" [(ngModel)]="login.username" required name="username" placeholder="Username"></ion-input>
+					</ion-item>
+	
+					<ion-item>
+						<ion-input type="password" [(ngModel)]="login.password" required name="password" placeholder="Password"></ion-input>
+					</ion-item>
+				</ion-list>
+			</div>
+			<div class="buttons">
+				<button ion-button type="submit">Login</button>
+			</div>
+		</form>
+	</div>
+</ion-content>
+  

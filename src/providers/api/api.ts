@@ -8,6 +8,8 @@ import { Injectable } from '@angular/core';
 export class Api {
     //url: string = 'https://sensorlabapi.azurewebsites.net/api/v1/';
     url: string = 'http://www.mocky.io/v2/5aab934b2e00003116138dd6';
+    //url: string = 'https://iotbusinesstackapi.azurewebsites.net/odata';
+    //url: string = 'http://iotbusinesstackapi.azurewebsites.net/odata';
 
   constructor(public http: HttpClient) {
   }

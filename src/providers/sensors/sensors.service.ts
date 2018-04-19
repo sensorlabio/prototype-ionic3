@@ -17,18 +17,37 @@ export class SensorsService extends AuthService {
      * @param body json object
      */
     getSensors(params?: any) {
-    // set headers
-    let headers = this.getHeaders();
+        // set headers
+        let headers = this.getHeaders();
 
-    let promise = new Promise((resolve, reject) => {
-        this.api.get('sensors', params ? params : {}, { headers} ).subscribe((res: any) => {
-            resolve(res);
-        }, (err) => {
-            reject(err);
+        let promise = new Promise((resolve, reject) => {
+            this.api.get('sensors', params ? params : {}, { headers} ).subscribe((res: any) => {
+                resolve(res);
+            }, (err) => {
+                reject(err);
+            });
         });
-    });
 
-    return promise;
+        return promise;
+    }
+
+    /**
+     * Send a GET request to get getMeasurements
+     * @param body json object
+     */
+    getMeasurements(params?: any) {
+        // set headers
+        let headers = this.getHeaders();
+
+        let promise = new Promise((resolve, reject) => {
+            this.api.get('SensorMeasurements', params ? params : {}, { headers} ).subscribe((res: any) => {
+                resolve(res);
+            }, (err) => {
+                reject(err);
+            });
+        });
+
+        return promise;
     }
 
     /**
@@ -37,12 +56,12 @@ export class SensorsService extends AuthService {
      */
     getSensorByID(id: number) {
 
-    // set params to Filter by ID    
-    let params = {
-        "filters[id]": id
-    };
+        // set params to Filter by ID    
+        let params = {
+            "filters[id]": id
+        };
 
-    return this.getSensors(params);
+        return this.getSensors(params);
     }
 
 }

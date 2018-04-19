@@ -1,0 +1,45 @@
+page-login {
+  height: 60%;
+  .centered-content-wrapper {
+    align-items: flex-start;
+  }
+  .logo-wrapper {
+    margin-top: 15%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 80%;
+    }
+  }
+  .auth-form {
+    width: 85%;
+    margin-top: -180px;
+    .list {
+        margin: 0;
+        .item-block:first-child {
+          border-top: 0.55px solid #c8c7cc;
+          border-bottom: 1px solid #c8c7cc;
+          border-radius: 6px 6px 0 0;
+        }
+        .item-block:nth-child(2) {
+          border-radius: 0 0 6px 6px;
+        }
+    }
+    .login-form-field {
+      background-color: #cccccc;
+      padding: 5px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      .button-ios {
+        border-radius: 5px;
+        width: 100%;
+        height: 40px;
+        border: #406128 solid 2px;
+      }
+    }    
+  }
+}

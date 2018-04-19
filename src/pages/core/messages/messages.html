@@ -1,0 +1,28 @@
+<ion-content>
+    <div class="title">
+        <img src="./assets/imgs/messages.png" (click)="gotoPlacesPage()"/>
+        <span>Messages</span>
+    </div>
+    <div class="messages-table">
+        <ion-scroll scrollY="true">
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-3>Time</ion-col>
+                    <ion-col col-9>{{message?.time}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-3>From</ion-col>
+                    <ion-col col-9>{{message?.from}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-3>Subject</ion-col>
+                    <ion-col col-9>{{message?.subject}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12><p>{{message?.message}}</p></ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-scroll>
+    </div>
+</ion-content>
+    

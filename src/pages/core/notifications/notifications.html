@@ -1,0 +1,23 @@
+<ion-content>
+    <div class="title">
+        <img src="./assets/imgs/messages.png" (click)="gotoPlacesPage()"/>
+        <span>Notifications</span>
+    </div>
+    <div class="notifications-table" *ngIf="values.notifications.length > 0">
+        <ion-scroll scrollY="true">
+            <ion-grid>
+                <ion-row class="header">
+                    <ion-col class="text-center" col-4>From</ion-col>
+                    <ion-col class="text-center" col-4>Subject</ion-col>
+                    <ion-col class="text-center" col-4>Time</ion-col>
+                </ion-row>
+                <ion-row *ngFor="let item of values.notifications; let i=index" [style.background-color]="i%2 == 0 ? '#cccccc' : 'white'" [style.font-weight]="item.checked == true ? 400 : 500" [style.opacity]="item.checked == true ? 0.8 : 1" (click)="openMessagesPage(i)">
+                    <ion-col class="text-center" col-4>{{item.from}}</ion-col>
+                    <ion-col class="text-center" col-4>{{item.subject}}</ion-col>
+                    <ion-col class="text-center" col-4>{{item.time}}</ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-scroll>
+    </div>
+</ion-content>
+    
