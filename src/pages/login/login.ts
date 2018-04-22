@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { NgForm } from '@angular/forms';
 import { CorePage } from '../core/core';
+import { Globals } from '../../providers/globals';
 
 @Component({
     selector: 'page-login',
@@ -14,7 +15,7 @@ export class LoginPage {
 		password: ''
 	};
 
-	constructor(public navCtrl: NavController, public navParams: NavParams) {
+	constructor(public navCtrl: NavController, public navParams: NavParams, public globals: Globals) {
 	}  
 	ngOnInit() {
 	}
@@ -28,7 +29,10 @@ export class LoginPage {
 			}
 		}
 		else {
-			this.navCtrl.setRoot(CorePage);
+			this.globals.setSensorMeasurements().then(() => {
+				this.navCtrl.setRoot(CorePage);
+			}).catch(() => {
+			});
 		}
 	}
 }

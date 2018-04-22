@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Values {
+    
+    measurements : any;
+    measurement_groups : any;
+    location_groups: any;
 
     notifications: any = [
         {

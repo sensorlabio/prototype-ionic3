@@ -14,8 +14,8 @@ export class AuthService {
 	 */
 	public getHeaders() {
 		let headers = new HttpHeaders({
-			'Content-Type': 'application/json',
-			'API-KEY': API_KEY
+			'Content-Type': 'application/json'//,
+			//'API-KEY': API_KEY
 		});
 
     	return headers;

@@ -17,6 +17,7 @@ import { HomePageModule } from '../pages/core/core.module';
 // Providers
 import { Api, SensorsService } from '../providers/providers';
 import { Values } from '../providers/values'
+import { Globals } from '../providers/globals'
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { Values } from '../providers/values'
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation,
     Values,
+    Globals,
     Api,
     SensorsService
   ]

@@ -41,7 +41,9 @@ export class SensorsService extends AuthService {
 
         let promise = new Promise((resolve, reject) => {
             this.api.get('SensorMeasurements', params ? params : {}, { headers} ).subscribe((res: any) => {
-                resolve(res);
+                resolve(res.value);
+                console.log("res");
+                console.log(res);
             }, (err) => {
                 reject(err);
             });

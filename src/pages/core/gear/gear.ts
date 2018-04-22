@@ -1,33 +1,19 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Values } from '../../../providers/values';
+import { PlacesPage } from '../places/places';
 
 @Component({
     selector: 'page-gear',
     templateUrl: 'gear.html'
 })
 export class GearPage {
-    gears: any = [
-        {
-            gear: "Fender Strat - Gilmour",
-            temp: 20,
-            acc: 10,
-            time: 180305
-        },
-        {
-            gear: "Gibson Les Paul - 59 Reissue Custom",
-            temp: 18,
-            acc: 15,
-            time: 1803050940
-        },
-        {
-            gear: "",
-            temp: null,
-            acc: null,
-            time: null
-        }
-    ];
-    constructor(public navCtrl: NavController) {
 
+    constructor(public navCtrl: NavController, public values: Values) {
+        console.log(this.values.measurement_groups);
     }
 
+    viewMapDetail(index) {
+        this.navCtrl.push(PlacesPage, {index: index});
+    }
 }
